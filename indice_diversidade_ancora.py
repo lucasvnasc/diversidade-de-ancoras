@@ -12,8 +12,10 @@ Esta ferramenta mede a diversidade de âncoras internas via IHH (0 a 1). Quanto 
 st.warning("""
     Atenção: Limite de 500 MB. Para reduzir o tamanho do arquivo:
     - Evite o "Bulk export" do Screaming Frog. Prefira selecionar as URLs na aba "Internal" e exportar da aba inferior "Inlinks".
-    - Aplique o filtro: ([Anchor Text] Not Is Empty And [Type] Equals 'Hyperlink').
+    - Aplique o filtro: ([Anchor Text] Not Is Empty And [Type] Equals 'Hyperlink' And [Link Position] Equals 'Content').
     - Se persistir, analise as páginas em grupos menores.
+
+    **Colunas necessárias: 'From', 'To', 'Link Position', 'Anchor Text'**
     """)
 arquivo_links = st.file_uploader("Escolha o arquivo CSV de inlinks", type="csv")
 if arquivo_links is not None:
