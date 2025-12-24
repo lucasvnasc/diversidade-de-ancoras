@@ -9,7 +9,7 @@ st.title("Análise de diversidade de texto âncora")
 st.markdown("""
 Esta ferramenta mede a diversidade de âncoras internas via IHH (0 a 1). Quanto mais próximo de 0, maior a diversidade. O ideal é abaixo de 0,15.
 """)
-st.info("""
+st.warning("""
     Atenção: Limite de 500 MB. Para reduzir o tamanho do arquivo:
     - Evite o "Bulk export" do Screaming Frog. Prefira selecionar as URLs na aba "Internal" e exportar da aba inferior "Inlinks".
     - Aplique o filtro: ([Anchor Text] Not Is Empty And [Type] Equals 'Hyperlink').
