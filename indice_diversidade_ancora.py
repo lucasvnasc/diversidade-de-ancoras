@@ -6,7 +6,7 @@ st.set_page_config(
     layout="centered",
 )
 st.title("Análise de diversidade de texto âncora")
-st.markdown("""Esta ferramenta calcula o índice de diversidade dos textos âncoras usados nos links internos de cada página usando o IHH.""")
+st.markdown("""Esta ferramenta calcula o índice de diversidade dos textos âncoras usados nos links internos de cada página. Para isso, utiliza o Índice Herfindahl-Hirschman (IHH), que varia de 0 a 1. Quanto mais próximo de 1, menos diverso são, quanto mais próximo de 0, mais diverso é. Índice de diversidade abaixo de 0,15 tendem a ser considerados bons.""")
 arquivo_links = st.file_uploader("Escolha o arquivo CSV de inlinks", type="csv")
 if arquivo_links is not None:
     try:
