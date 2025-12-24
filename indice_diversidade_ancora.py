@@ -3,7 +3,7 @@ import pandas as pd
 st.set_page_config(
     page_title="Índice de Diversidade de Texto Âncora",
     page_icon="🔗",
-    layout="wide",
+    layout="centered",
 )
 st.title("Análise de diversidade de texto âncora")
 st.markdown("""Esta ferramenta calcula o índice de diversidade dos textos âncoras usados nos links internos de cada página usando o IHH.""")
