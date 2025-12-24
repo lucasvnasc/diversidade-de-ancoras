@@ -42,14 +42,14 @@ if arquivo_links is not None:
                     valor_ihh = sum(contribuicoes)
                     indice_diversidade_resultado.append({
                         'URL': url, 
-                        'Links Unicos': total_anchors, 
+                        'Nº de Links': total_anchors, 
                         'Índice de Diversidade': valor_ihh
                     })
                     if i % 100 == 0:
                         progress_bar.progress((i + 1) / total_iterations)
                 progress_bar.progress(100)
                 resultado_df = pd.DataFrame(indice_diversidade_resultado)
-                resultado_df.sort_values(by='Links Unicos', ascending=False, inplace=True)
+                resultado_df.sort_values(by='Nº de Links', ascending=False, inplace=True)
                 st.success("Índice calculado com sucesso!")
                 st.subheader("Pré-visualização dos Dados")
                 st.dataframe(resultado_df, use_container_width=True)
